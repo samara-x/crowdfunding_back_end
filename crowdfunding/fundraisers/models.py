@@ -2,10 +2,11 @@ from django.db import models
 from django.contrib.auth import get_user_model
 
 # Create your models here.
+
 class Fundraiser(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
-    goal = models.IntegerField()
+    goal = models.PositiveIntegerField()
     image = models.URLField()
     is_open = models.BooleanField()
     date_created = models.DateTimeField(auto_now=True)
