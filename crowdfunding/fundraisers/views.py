@@ -61,7 +61,7 @@ class FundraiserDetail(APIView):
             serializer.errors,
             status=status.HTTP_400_BAD_REQUEST
         )    
-    
+
 class PledgeList(APIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
