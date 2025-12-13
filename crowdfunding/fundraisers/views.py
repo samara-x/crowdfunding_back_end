@@ -82,6 +82,8 @@ class PledgeList(APIView):
             serializer.errors,
             status=status.HTTP_400_BAD_REQUEST
         )
+    
+#do I remove all of the below?
 class PledgeDetail(APIView):
 
     permission_classes = [
@@ -96,18 +98,18 @@ class PledgeDetail(APIView):
         except Pledge.DoesNotExist:
             raise Http404
         
-    def put(self, request, pk):
-        pledge = self.get_object(pk)
-        serializer = PledgeDetailSerializer(
-            instance=pledge,
-            data=request.data,
-            partial=True
-        )
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
+    #def put(self, request, pk):
+    #    pledge = self.get_object(pk)
+    #    serializer = PledgeDetailSerializer(
+    #        instance=pledge,
+    #        data=request.data,
+    #        partial=True
+    #    )
+    #    if serializer.is_valid():
+    #        serializer.save()
+    #        return Response(serializer.data)
 
-        return Response(
-            serializer.errors,
-            status=status.HTTP_400_BAD_REQUEST
-        )
+    #    return Response(
+    #        serializer.errors,
+    #        status=status.HTTP_400_BAD_REQUEST
+    #    )
