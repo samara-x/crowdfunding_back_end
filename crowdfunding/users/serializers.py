@@ -1,10 +1,14 @@
 from rest_framework import serializers
 from .models import CustomUser
+from fundraisers.serializers import FundraiserSerializer, PledgeSerializer
 
 class CustomUserSerializer(serializers.ModelSerializer):
+    fundraisers = FundraiserSerializer(many=True, read_only=True, source='owned_fundraisers')
+    pledges = PledgeSerializer(many=True, read_only=True)
+    
     class Meta:
         model = CustomUser
-        fields = '__all__'
+        fields = ['username','password']
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
