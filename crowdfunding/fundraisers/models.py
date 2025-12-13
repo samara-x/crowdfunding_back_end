@@ -6,10 +6,10 @@ from django.contrib.auth import get_user_model
 class Fundraiser(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
-    goal = models.PositiveIntegerField()
+    goal = models.DecimalField(max_digits=10, decimal_places=2)
     image = models.URLField()
     is_open = models.BooleanField()
-    date_created = models.DateTimeField(auto_now=True)
+    date_created = models.DateTimeField(auto_now_add=True)
     owner = models.ForeignKey(
         get_user_model(),
         on_delete=models.CASCADE,
@@ -17,9 +17,10 @@ class Fundraiser(models.Model):
     )
 
 class Pledge(models.Model):
-    amount = models.IntegerField()
+    amount = models.DecimalField(max_digits=10, decimal_places=2)
     comment = models.CharField(max_length=200)
-    anonymous = models.BooleanField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    anonymous = models.BooleanField(default=False)
     fundraiser = models.ForeignKey(
         'Fundraiser',
         on_delete=models.CASCADE,
@@ -30,3 +31,6 @@ class Pledge(models.Model):
         on_delete=models.CASCADE,
         related_name='pledges'
     )
+
+#I have chosen to not allow anonymous pledges
+#have kept this in as an option to change in the future if needed. 
