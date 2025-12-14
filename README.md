@@ -1,28 +1,38 @@
 # Crowdfunding Back End
-{{ your name here }}
+FundingFourCrowds
 
 ## Planning:
 ### Concept/Name
-{{ Include a short description of your website concept here. }}
+They say 3's a crowd, but what if you were wanting to expand to four? FundingFourCrowds is a lightweight crowdfunding platform designed to help individuals seek support for meaningful personal experiences in a smaller 'crowd' or to be able to post if they are needing that +1 for a great deal! The platform enables users to share ideas such as attending events, learning new skills, travelling, wellness activities, or small life goals, and allows supporters to be apart of it!
 
-### Intended Audience/User Stories
-{{ Who are your intended audience? How will they use the website? }}
+The intent would be to not have a monetised option, and be able to pledge commitment to time or any human-centred way.
+
+The focus is on connection, storytelling, and shared belief, rather than monetary value. 
+
+### Intended Audience
+- Individuals seeking support for personal growth experiences (e.g. courses, travel, events, wellness goals)
+- Supporters who want to contribute to people they know or causes they resonate with
+- Communities built around encouragement, shared values, and small meaningful goals
+
+### User Stories
+- As a user, I want to create a fundraiser explaining my idea and funding goal
+- As a supporter, I want to browse fundraisers and contribute
+- As a fundraiser owner, I want to close or pause my fundraiser when my goal is met
+- As a user, I want to view my pledges and fundraisers in one place
 
 ### Front End Pages/Functionality
-- {{ A page on the front end }}
-    - {{ A list of dot-points showing functionality is available on this page }}
-    - {{ etc }}
-    - {{ etc }}
-- {{ A second page available on the front end }}
-    - {{ Another list of dot-points showing functionality }}
-    - {{ etc }}
+- Home / Landing Page
+    - Overview of the platform and its purpose
+    - List of featured or recent fundraisers
+    - Ability to navigate to sign up or log in
+    - *Basic search or filter for fundraisers (Not yet implemented)
+  
+- User Registration / Login Page
+  - Create a new user account (username, email, password)
+  - Log in to an existing account
+  - Authentication and session handling
 
 ### API Spec
-{{ Fill out the table below to define your endpoints. An example of what this might look like is shown at the bottom of the page. 
-
-It might look messy here in the PDF, but once it's rendered it looks very neat! 
-
-It can be helpful to keep the markdown preview open in VS Code so that you can see what you're typing more easily. }}
 
 | URL | HTTP Method | Purpose | Request Body | Success Response Code | Authentication/Authorisation |
 | --- | ----------- | ------- | ------------ | --------------------- | ---------------------------- |
@@ -37,4 +47,47 @@ fundraisers/ | **PUT** | update fundraisers | {"title": "str","description": "st
 
 
 ### DB Schema
-![]( {{ ./relative/path/to/your/schema/image.png }} )
+![] still working on my IO dwaing skills 
++------------------+
+|   CustomUser     |
++------------------+
+| id (PK)          |
+| username (unique)|
+| email (unique)   |
+| password         |
+| date_joined      |
+| is_active        |
++------------------+
+        | 1
+        |
+        | owns
+        |
+        | *
++------------------+
+|   Fundraiser     |
++------------------+
+| id (PK)          |
+| title            |
+| description      |
+| goal             |
+| image            |
+| is_open          |
+| date_created     |
+| owner_id (FK)    |
++------------------+
+        | 1
+        |
+        | has many
+        |
+        | *
++------------------+
+|     Pledge       |
++------------------+
+| id (PK)          |
+| amount           |
+| comment          |
+| anonymous        |
+| created_at       |
+| supporter_id(FK) |
+| fundraiser_id(FK)|
++------------------+

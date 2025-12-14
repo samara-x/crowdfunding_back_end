@@ -5,10 +5,10 @@ from fundraisers.serializers import FundraiserSerializer, PledgeSerializer
 class CustomUserSerializer(serializers.ModelSerializer):
     fundraisers = FundraiserSerializer(many=True, read_only=True, source='owned_fundraisers')
     pledges = PledgeSerializer(many=True, read_only=True)
-    
+
     class Meta:
         model = CustomUser
-        fields = ['username','password']
+        fields = ['username','email','password','fundraisers','pledges']
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
