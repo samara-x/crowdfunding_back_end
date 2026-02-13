@@ -91,3 +91,10 @@ fundraisers/ | **PUT** | update fundraisers | {"title": "str","description": "st
 | supporter_id(FK) |
 | fundraiser_id(FK)|
 +------------------+
+
+
+![Insomnia reference image for viewing users](ref_imgs/GET View Users.png)
+ref_imgs/POST API Token.png
+ref_imgs/POST Create new fundraiser.png
+
+POST Create Users.png
