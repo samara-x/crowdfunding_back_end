@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework import status, permissions
 from django.http import Http404
 from .models import Fundraiser, Pledge
-from .serializers import FundraiserSerializer, PledgeSerializer, PledgeDetailSerializer, FundraiserDetailSerializer
+from .serializers import FundraiserSerializer, PledgeSerializer, FundraiserDetailSerializer
 from .permissions import IsOwnerOrReadOnly, IsSupporterOrReadOnly
 
 class FundraiserList(APIView):
@@ -61,6 +61,11 @@ class FundraiserDetail(APIView):
             serializer.errors,
             status=status.HTTP_400_BAD_REQUEST
         )    
+    
+    def delete(self, request, pk):
+        fundraiser = self.get_object(pk)
+        fundraiser.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 class PledgeList(APIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
