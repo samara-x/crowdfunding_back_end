@@ -1,5 +1,6 @@
 # FundingFourCrowds Back End
 FundingFourCrowds - A Repo that contains my She Codes Crowdfunding back end project
+---
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
 ![DjangoREST](https://img.shields.io/badge/DJANGO--REST-ff1709?style=for-the-badge&logo=django&logoColor=white&color=ff1709&labelColor=gray)
@@ -10,11 +11,11 @@ FundingFourCrowds - A Repo that contains my She Codes Crowdfunding back end proj
 
 ## Table of Contents
 - [FundingFourCrowds Back End](#fundingfourcrowds-back-end)
+  - [FundingFourCrowds - A Repo that contains my She Codes Crowdfunding back end project](#fundingfourcrowds---a-repo-that-contains-my-she-codes-crowdfunding-back-end-project)
   - [Table of Contents](#table-of-contents)
     - [Concept \& Purpose](#concept--purpose)
     - [Intended Audience](#intended-audience)
     - [User Stories](#user-stories)
-    - [Features](#features)
   - [Front End Pages/Functionality](#front-end-pagesfunctionality)
     - [Tech Stack](#tech-stack)
   - [API Overview](#api-overview)
@@ -47,8 +48,6 @@ The focus is on connection, storytelling, and shared belief, rather than monetar
 - As a supporter, I want to browse fundraisers and contribute
 - As a fundraiser owner, I want to close or pause my fundraiser when my goal is met
 - As a user, I want to view my pledges and fundraisers in one place
-
-### Features
 
 ## Front End Pages/Functionality
 - Home / Landing Page
@@ -93,7 +92,7 @@ fundraisers/ | **PUT** | update fundraisers | {"title": "str","description": "st
 
 
 ### Database Schema
-![Database Schema reference image](schema.drawio)
+![Database Schema reference image](ref_imgs/schema.svg)
 
 ### Insomnia API Testing
 The following screenshots demonstrate successful aPI interactions using insomnia
