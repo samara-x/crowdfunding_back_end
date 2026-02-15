@@ -21,7 +21,6 @@ ADD HEROKU HERE
     - [Intended Audience](#intended-audience)
     - [Features](#features)
   - [Front End Pages/Functionality](#front-end-pagesfunctionality)
-    - [Project Status](#project-status)
     - [User Stories](#user-stories)
     - [Tech Stack](#tech-stack)
   - [API Overview](#api-overview)
@@ -29,15 +28,13 @@ ADD HEROKU HERE
     - [Database Schema](#database-schema)
     - [Insomnia API Testing](#insomnia-api-testing)
   - [Successful GET Request](#successful-get-request)
-  - [](#-1)
   - [Successful POST Request](#successful-post-request)
-  - [](#-2)
-  - [](#-3)
   - [Successful DEL Request](#successful-del-request)
-  - [](#-4)
-    - [Setup \& Installation](#setup--installation)
-    - [Running Locally](#running-locally)
-    - [Future Plans / Roadmap](#future-plans--roadmap)
+  - [Project Status](#project-status)
+  - [Setup \& Installation](#setup--installation)
+    - [Prerequisites](#prerequisites)
+  - [Running Locally](#running-locally)
+  - [Roadmap / Future Plans](#roadmap--future-plans)
 
 ### Concept & Purpose
 They say 3's a crowd, but what if you were wanting to expand to four? FundingFourCrowds is a lightweight crowdfunding platform designed to help individuals seek support for meaningful personal experiences in a smaller 'crowd' or to be able to post if they are needing that +1 for a great deal! The platform enables users to share ideas such as attending events, learning new skills, travelling, wellness activities, or small life goals, and allows supporters to be apart of it!
@@ -64,10 +61,7 @@ The focus is on connection, storytelling, and shared belief, rather than monetar
   - Create a new user account (username, email, password)
   - Log in to an existing account
   - Authentication and session handling
-
-### Project Status
-
-
+  
 ### User Stories
 - As a user, I want to create a fundraiser explaining my idea and funding goal
 - As a supporter, I want to browse fundraisers and contribute
@@ -105,50 +99,7 @@ fundraisers/ | **PUT** | update fundraisers | {"title": "str","description": "st
 
 
 ### Database Schema
-![] still working on my IO dwaing skills 
-+------------------+
-|   CustomUser     |
-+------------------+
-| id (PK)          |
-| username (unique)|
-| email (unique)   |
-| password         |
-| date_joined      |
-| is_active        |
-+------------------+
-        | 1
-        |
-        | owns
-        |
-        | *
-+------------------+
-|   Fundraiser     |
-+------------------+
-| id (PK)          |
-| title            |
-| description      |
-| goal             |
-| image            |
-| is_open          |
-| date_created     |
-| owner_id (FK)    |
-+------------------+
-        | 1
-        |
-        | has many
-        |
-        | *
-+------------------+
-|     Pledge       |
-+------------------+
-| id (PK)          |
-| amount           |
-| comment          |
-| anonymous        |
-| created_at       |
-| supporter_id(FK) |
-| fundraiser_id(FK)|
-+------------------+
+![Database Schema reference image](schema.drawio)
 
 ### Insomnia API Testing
 The following screenshots demonstrate successful aPI interactions using insomnia
@@ -156,17 +107,17 @@ The following screenshots demonstrate successful aPI interactions using insomnia
 ## Successful GET Request
 
 ![Insomnia reference image for viewing users](ref_imgs/GET_viewusers.png)
----
+
 ## Successful POST Request
 
 ![Insomnia POST request](ref_imgs/POST_apitoken.png)
----
+
 ![Insomnia POST request](ref_imgs/POST_createnewfundraiser.png)
----
+
 ## Successful DEL Request
 
 ![Insomnia DEL request](ref_imgs/DEL_function.png)
----
+
 ## Project Status
 
 - Backend API: ~70% complete (users, fundraisers, pledges, basic auth)

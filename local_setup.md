@@ -1,9 +1,9 @@
 ## Local Setup Instructions
 
 1. Create & activate virtual environment:
-   - python -m venv venv
-   - source venv/bin/activate   # Linux/Mac
-   - venv\Scripts\activate      # Windows
+   - `python -m venv venv`
+   - `source venv/bin/activate`   # Linux/Mac
+   - `venv\Scripts\activate`      # Windows
 2. Install dependencies: `pip install -r requirements.txt`
 3. Create a `.env` file (e.g. in project root) with at least:
    - `DJANGO_SECRET_KEY` – your secret key
