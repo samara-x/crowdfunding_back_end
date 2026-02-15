@@ -39,7 +39,8 @@ The focus is on connection, storytelling, and shared belief, rather than monetar
   - Log in to an existing account
   - Authentication and session handling
 
-### Tech Stack
+## Tech Stack
+
 **Backend**
 - Python 3.11+
 - Django (web framework)
@@ -69,23 +70,25 @@ fundraisers/ | **GET** | view fundraisers | no body required | 200 OK | Anyone |
 fundraisers/ | **PUT** | update fundraisers | {"title": "str","description": "str","goal": int,"image": "str","is_open": bool} | 200 OK | Authenticated and authorised user only (Creator of fundraiser) |
 
 
-### Database Schema
+## Database Schema
+
 ![Database Schema reference image](ref_imgs/schema.svg)
 
-### Insomnia API Testing
+## Insomnia API Testing
+
 The following screenshots demonstrate successful aPI interactions using insomnia
 
-## Successful GET Request
+### Successful GET Request
 
 ![Insomnia reference image for viewing users](ref_imgs/GET_viewusers.png)
 
-## Successful POST Request
+### Successful POST Request
 
 ![Insomnia POST request](ref_imgs/POST_apitoken.png)
 
 ![Insomnia POST request](ref_imgs/POST_createnewfundraiser.png)
 
-## Successful DEL Request
+### Successful DEL Request
 
 ![Insomnia DEL request](ref_imgs/DEL_function.png)
 
@@ -107,7 +110,7 @@ The following screenshots demonstrate successful aPI interactions using insomnia
 ## Running Locally
 **For step by step usage guide, [click here](/local_setup.md)**
 
-## Roadmap / Future Plans
+### Roadmap / Future Plans
 
 - Implement non-monetary pledge types (time commitment, messages, skills offer)
 - Add frontend React/Vue/HTMX interface
