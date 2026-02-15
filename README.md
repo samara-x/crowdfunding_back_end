@@ -9,28 +9,6 @@ FundingFourCrowds - A Repo that contains my She Codes Crowdfunding back end proj
 🔗 **Live API:**  
 (https://fundingfourcrowds-0aa4332162ae.herokuapp.com/""/)
 
-## Table of Contents
-- [FundingFourCrowds Back End](#fundingfourcrowds-back-end)
-  - [FundingFourCrowds - A Repo that contains my She Codes Crowdfunding back end project](#fundingfourcrowds---a-repo-that-contains-my-she-codes-crowdfunding-back-end-project)
-  - [Table of Contents](#table-of-contents)
-    - [Concept \& Purpose](#concept--purpose)
-    - [Intended Audience](#intended-audience)
-    - [User Stories](#user-stories)
-  - [Front End Pages/Functionality](#front-end-pagesfunctionality)
-    - [Tech Stack](#tech-stack)
-  - [API Overview](#api-overview)
-    - [API Spec](#api-spec)
-    - [Database Schema](#database-schema)
-    - [Insomnia API Testing](#insomnia-api-testing)
-  - [Successful GET Request](#successful-get-request)
-  - [Successful POST Request](#successful-post-request)
-  - [Successful DEL Request](#successful-del-request)
-  - [Project Status](#project-status)
-  - [Setup \& Installation](#setup--installation)
-    - [Prerequisites](#prerequisites)
-  - [Running Locally](#running-locally)
-  - [Roadmap / Future Plans](#roadmap--future-plans)
-
 ### Concept & Purpose
 They say 3's a crowd, but what if you were wanting to expand to four? FundingFourCrowds is a lightweight crowdfunding platform designed to help individuals seek support for meaningful personal experiences in a smaller 'crowd' or to be able to post if they are needing that +1 for a great deal! The platform enables users to share ideas such as attending events, learning new skills, travelling, wellness activities, or small life goals, and allows supporters to be apart of it!
 
